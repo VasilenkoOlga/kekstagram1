@@ -1,4 +1,3 @@
-
 // import { generateElements } from './data.js';
 import './renderPicture.js';
 import {closerEditForm} from './form.js';
