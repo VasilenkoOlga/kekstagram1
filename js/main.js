@@ -3,7 +3,7 @@ import './renderPicture.js';
 import {closerEditForm} from './form.js';
 import './scaleUploadImg.js';
 import './addImageEffect.js';
-import './showSendUploadedImg.js';
+import './showUploadedImg.js';
 import {getData, setUserFormSubmit} from './api.js';'./api.js';
 
 getData('Default');
