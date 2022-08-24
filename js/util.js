@@ -51,7 +51,7 @@ const showAlert = (message) => {
   document.body.append(alertContainer);
 };
 
-
+// Функция ожидания 500мс до ответа на действие
 function debounce(func, wait) {
   let timeout;
 
