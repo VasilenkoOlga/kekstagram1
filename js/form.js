@@ -60,8 +60,8 @@ hashTags.addEventListener('input', () => {
   if (!hashValue) {
     hashTags.setCustomValidity('');
   } else {
-    for(let i = 0;i < hashArray.length;i++) {
-      if (!HASHTAG_VALID_REGEX.test(hashArray[i])) {
+    for(let index = 0;index < hashArray.length;index++) {
+      if (!HASHTAG_VALID_REGEX.test(hashArray[index])) {
         hashTags.setCustomValidity(`- хэш-тег начинается с символа #;
         - строка после решётки должна состоять из букв и чисел и не может содержать пробелы, спецсимволы (#, @, $ и т. п.), символы пунктуации (тире, дефис, запятая и т. п.), эмодзи и т. д.;
         - хеш-тег не может состоять только из одной решётки;
