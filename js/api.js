@@ -50,6 +50,4 @@ const setUserFormSubmit = (onSuccess) => {
   });
 };
 
-//setUserFormSubmit(closerEditForm);
-
 export {getData, amountPhotoArray,setUserFormSubmit};

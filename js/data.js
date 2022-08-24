@@ -24,50 +24,50 @@ const NAMES = [
   'Вашингтон',
 ];
 
-const createComment = function(i) {
+const createComment = function(index) {
   return {
-    id: i,
+    id: index,
     avatar: `img/avatar-${ randomNumber(1,6)}.svg`,
     message: messages[randomNumber(0,messages.length-1)],
     name: NAMES[randomNumber(0,NAMES.length-1)],
   };
 };
 
-const createDescription = function (i){
+const createDescription = function (index){
   const objectDescription = {
-    id: i,
-    url: `photos/${ i }.jpg`,
+    id:index,
+    url: `photos/${ index }.jpg`,
     description: 'Кот',
     likes: randomNumber(MINLIKES, MAXLIKES),
     comments: [],
   };
 
   if((objectDescription.id % 2) !== 0 ) {
-    objectDescription.comments.push(createComment(i));
-    objectDescription.comments.push(createComment(i *100));
-    objectDescription.comments.push(createComment(i *200));
-    objectDescription.comments.push(createComment(i *300));
-    objectDescription.comments.push(createComment(i *400));
-    objectDescription.comments.push(createComment(i *500));
-    objectDescription.comments.push(createComment(i *600));
-    objectDescription.comments.push(createComment(i *700));
-    objectDescription.comments.push(createComment(i *800));
-    objectDescription.comments.push(createComment(i *900));
-    objectDescription.comments.push(createComment(i *1000));
-    objectDescription.comments.push(createComment(i *110));
-    objectDescription.comments.push(createComment(i *120));
-    objectDescription.comments.push(createComment(i *130));
-    objectDescription.comments.push(createComment(i *140));
-    objectDescription.comments.push(createComment(i *150));
+    objectDescription.comments.push(createComment(index));
+    objectDescription.comments.push(createComment(index *100));
+    objectDescription.comments.push(createComment(index *200));
+    objectDescription.comments.push(createComment(index *300));
+    objectDescription.comments.push(createComment(index *400));
+    objectDescription.comments.push(createComment(index *500));
+    objectDescription.comments.push(createComment(index *600));
+    objectDescription.comments.push(createComment(index *700));
+    objectDescription.comments.push(createComment(index *800));
+    objectDescription.comments.push(createComment(index *900));
+    objectDescription.comments.push(createComment(index *1000));
+    objectDescription.comments.push(createComment(index *110));
+    objectDescription.comments.push(createComment(index *120));
+    objectDescription.comments.push(createComment(index *130));
+    objectDescription.comments.push(createComment(index *140));
+    objectDescription.comments.push(createComment(index *150));
   } else {
-    objectDescription.comments.push(createComment(i));
-    objectDescription.comments.push(createComment(i *100));
-    objectDescription.comments.push(createComment(i *200));
-    objectDescription.comments.push(createComment(i *300));
-    objectDescription.comments.push(createComment(i *400));
-    objectDescription.comments.push(createComment(i *500));
-    objectDescription.comments.push(createComment(i *600));
-    objectDescription.comments.push(createComment(i *700));
+    objectDescription.comments.push(createComment(index));
+    objectDescription.comments.push(createComment(index *100));
+    objectDescription.comments.push(createComment(index *200));
+    objectDescription.comments.push(createComment(index *300));
+    objectDescription.comments.push(createComment(index *400));
+    objectDescription.comments.push(createComment(index *500));
+    objectDescription.comments.push(createComment(index *600));
+    objectDescription.comments.push(createComment(index *700));
   }
 
   return {
@@ -78,8 +78,8 @@ const createDescription = function (i){
 const photoDescriptions = [];
 
 const generateData = function (photoDescriptions, number = 25) {
-  for(let i = 1; i <= number ;i++) {
-    photoDescriptions.push(createDescription(i));
+  for(let index = 1; index <= number ;index++) {
+    photoDescriptions.push(createDescription(index));
   }
   return photoDescriptions;
 };
